@@ -21,7 +21,7 @@ function! HandleEnterNumber(winid, key) abort
         return 1
     endif
     call popup_close(a:winid, -1)
-    return 1
+    return 0
 endfunction
 
 function! GoToLineHandler(id, result) abort
