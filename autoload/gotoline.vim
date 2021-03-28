@@ -1,23 +1,25 @@
 let s:isPopupVisible = 0
-let s:lineNr = ''
+let s:lineNrInputString = ''
 function! GetPopupText() abort
-    return 'Go to line: '.s:lineNr
+    let number = str2nr(s:lineNrInputString)
+    let numberStr = number == 0 ? '' : number
+    return 'Go to line: '.numberStr
 endfunction
 
 function! HandleEnterNumber(winid, key) abort
     if a:key == "\<CR>"
-        call popup_close(a:winid, s:lineNr)
+        call popup_close(a:winid, s:lineNrInputString)
         return 1
     endif
 
     if a:key == "\<BS>"
-        let s:lineNr = s:lineNr[0:-2]
+        let s:lineNrInputString = s:lineNrInputString[0:-2]
         call popup_settext(a:winid, GetPopupText())
         return 1
     endif
 
     if a:key =~ '\d'
-        let s:lineNr .= a:key
+        let s:lineNrInputString .= a:key
         call popup_settext(a:winid, GetPopupText())
         return 1
     endif
@@ -30,10 +32,10 @@ function! GoToLineHandler(id, result) abort
     let s:isPopupVisible = 0
 
     if (a:result > -1)
-        execute s:lineNr
+        execute s:lineNrInputString
     endif
 
-    let s:lineNr = ''
+    let s:lineNrInputString = ''
 endfunction
 
 function! gotoline#GoToLine() abort
