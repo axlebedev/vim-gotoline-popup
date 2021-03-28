@@ -1,4 +1,4 @@
-'Go to line' popup
+# 'Go to line' popup
 
 ### Installation
 ```
@@ -8,15 +8,15 @@ nmap <C-g> <plug>(gotoline-popup)
 
 ### Usage
 Press `<C-g>` to open popup.  
-Enter line number, press 'Enter' to jump to line  
-Press 'Esc' or any not number to cancel and close popup.
+Enter line number, press `Enter` to jump to line  
+Press `Esc` or any not number to cancel and close popup.
 
 ## Params
 Change input prompt  
 `let g:gotoline_prompt = "Go to line: "`
 
-Go to inputed line immediately
+Go to inputed line immediately  
 `let g:gotoline_jump_on_input = 1`
 
-Return to initial line if popup was cancelled
+Return to initial line if popup was cancelled  
 `let g:gotoline_reset_on_cancel = 1`
