@@ -1,4 +1,6 @@
 # 'Go to line' popup
+Almost same as `100G` in normal mode, but with convenience
+![gotoline-popup](gotoline.gif)
 
 ### Installation
 ```
