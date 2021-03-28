@@ -1,0 +1,54 @@
+*gotoline.txt* 'Go to line' popup
+
+====================================================================
+CONTENTS                                          *GotoLine-Contents*
+
+    1. Usage ................ |GotoLine-Usage|
+    2. Mappings ............. |GotoLine-Mappings|
+    3. Options .............. |GotoLine-Options|
+    4. License .............. |GotoLine-License|
+
+====================================================================
+Section 1: Usage                                     *GotoLine-Usage*
+
+Almost same as `100G` in normal mode, but with convenience
+
+Press `<C-g>` to open popup.
+Enter line number, press `Enter` to jump to line
+Press `Esc` or any not number to cancel and close popup.
+
+
+====================================================================
+Section 2: Mappings                               *GotoLine-Mappings*
+
+nmap <C-g> <plug>(gotoline-popup)
+
+
+====================================================================
+Section 3: Options                                 *GotoLine-Options*
+
+                                                 *g:gotoline_prompt*
+Change input prompt:
+Default value: "Go to line: ".
+`let g:gotoline_prompt = "Go to line: "`
+
+                                          *g:gotoline_jump_on_input*
+Go to inputed line immediately.
+If `0`, cursor will not be moved until `Enter` pressed.
+Default value: `1`.
+`let g:gotoline_jump_on_input = 1`
+
+                                        *g:gotoline_reset_on_cancel*
+Return to initial line if popup was cancelled.
+If `0` and `g:gotoline_jump_on_input = 1`,
+cursor will stay at last position.
+Default value: `1`.
+`let g:gotoline_jump_on_input = 1`
+
+
+====================================================================
+Section 4: License                                 *GotoLine-License*
+
+MIT
+
+vim:tw=78:ts=8:noet:ft=help:norl:

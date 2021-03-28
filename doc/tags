@@ -1,0 +1,9 @@
+GotoLine-Contents	gotoline.txt	/*GotoLine-Contents*
+GotoLine-License	gotoline.txt	/*GotoLine-License*
+GotoLine-Mappings	gotoline.txt	/*GotoLine-Mappings*
+GotoLine-Options	gotoline.txt	/*GotoLine-Options*
+GotoLine-Usage	gotoline.txt	/*GotoLine-Usage*
+g:gotoline_jump_on_input	gotoline.txt	/*g:gotoline_jump_on_input*
+g:gotoline_prompt	gotoline.txt	/*g:gotoline_prompt*
+g:gotoline_reset_on_cancel	gotoline.txt	/*g:gotoline_reset_on_cancel*
+gotoline.txt	gotoline.txt	/*gotoline.txt*
