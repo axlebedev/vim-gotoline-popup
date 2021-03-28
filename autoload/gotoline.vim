@@ -1,5 +1,6 @@
 let s:isPopupVisible = 0
 let s:inputString = ''
+let s:initialLine = -1
 
 function! GetPopupText() abort
     let number = str2nr(s:inputString)
@@ -43,6 +44,8 @@ function! GoToLineHandler(id, result) abort
 
     if (a:result > -1)
         execute s:inputString
+    elseif g:gotoline_reset_on_cancel
+        execute s:initialLine
     endif
 
     let s:inputString = ''
@@ -51,6 +54,7 @@ endfunction
 function! gotoline#GoToLine() abort
     if (!s:isPopupVisible)
         let s:isPopupVisible = 1
+        let s:initialLine = line('.')
         call popup_dialog(GetPopupText(), #{
             \ filter: 'HandleEnterNumber',
             \ callback: 'GoToLineHandler',
