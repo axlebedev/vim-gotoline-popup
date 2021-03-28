@@ -46,6 +46,7 @@ function! gotoline#GoToLine() abort
             \ filter: 'HandleEnterNumber',
             \ callback: 'GoToLineHandler',
             \ borderchars: ['─', '│', '─', '│', '╭', '╮', '╯', '╰'],
+            \ minwidth: len(g:gotoline_prompt) + 4
             \ })
     endif
 endfunction
