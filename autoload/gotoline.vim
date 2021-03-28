@@ -3,7 +3,10 @@ let s:inputString = ''
 
 function! GetPopupText() abort
     let number = str2nr(s:inputString)
+
+    " Need it because with <expr> mapping it always calls '0' key on start
     let numberStr = number == 0 ? '' : number
+
     return g:gotoline_prompt.numberStr
 endfunction
 
