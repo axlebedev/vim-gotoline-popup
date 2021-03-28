@@ -3,6 +3,7 @@ if exists('g:loaded_gotoline') && g:loaded_gotoline
 endif
 
 let g:gotoline_prompt = "Go to line: "
+let g:gotoline_jump_on_input = 1
 
 noremap <silent><expr><plug>(gotoline-popup) gotoline#GoToLine()
 

@@ -19,12 +19,18 @@ function! HandleEnterNumber(winid, key) abort
     if a:key == "\<BS>"
         let s:inputString = s:inputString[0:-2]
         call popup_settext(a:winid, GetPopupText())
+        if g:gotoline_jump_on_input && s:inputString
+            execute s:inputString
+        endif
         return 1
     endif
 
     if a:key =~ '\d'
         let s:inputString .= a:key
         call popup_settext(a:winid, GetPopupText())
+        if g:gotoline_jump_on_input && s:inputString
+            execute s:inputString
+        endif
         return 1
     endif
 
