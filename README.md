@@ -1,5 +1,6 @@
 # 'Go to line' popup
-Almost same as `100G` in normal mode, but with convenience
+Almost same as normal mode `100G` or `:100<CR>`  
+
 ![gotoline-popup](gotoline.gif)
 
 ### Installation
@@ -14,17 +15,29 @@ Enter line number, press `Enter` to jump to line
 Press `Esc` or any not number to cancel and close popup.
 
 ### Options
-Map key:  
-`nmap <C-g> <plug>(gotoline-popup)`
+##### `g:gotoline_prompt`
+Default: `"Go to line: "`  
+Change input prompt  
+`let g:gotoline_prompt = "Go to line: "`  
 
-Change input prompt:  
-`let g:gotoline_prompt = "Go to line: "`
+##### `g:gotoline_jump_on_input`
+Default: `1`
+Go to inputed line immediately on input. If `0`, cursor will not be moved until `Enter` pressed:  
+`let g:gotoline_jump_on_input = 0`  
 
-Go to inputed line immediately. If `0`, cursor will not be moved until `Enter` pressed:  
-`let g:gotoline_jump_on_input = 1`
-
+##### `g:gotoline_reset_on_cancel`
+Default: `1`  
 Return to initial line if popup was cancelled. If `0` and `g:gotoline_jump_on_input = 1`, cursor will stay at last position:  
-`let g:gotoline_reset_on_cancel = 1`
+`let g:gotoline_reset_on_cancel = 0`
 
-### License
-MIT
+### NOTES
+If you find a bug, or have an improvement suggestion -
+please place an issue in this repository.
+
+---
+
+Check out vim plugins:  
+[**footprints**](https://github.com/axlebedev/footprints)  
+[**vim-find-my-cursor**](https://github.com/axlebedev/vim-find-my-cursor)  
+
+**<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;★</p>**
