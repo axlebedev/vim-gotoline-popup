@@ -1,4 +1,4 @@
-# 'Go to line' popup
+# Vim plugin: 'Go to line' popup
 Almost same as normal mode `100G` or `:100<CR>`  
 
 ![gotoline-popup](gotoline.gif)
@@ -8,7 +8,6 @@ Almost same as normal mode `100G` or `:100<CR>`
 Plug 'axlebedev/vim-gotoline-popup'
 nmap <C-g> <plug>(gotoline-popup)
 ```
-
 ### Usage
 Press `<C-g>` to open popup.  
 Enter line number, press `Enter` to jump to line  
