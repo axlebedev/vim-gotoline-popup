@@ -35,8 +35,6 @@ please place an issue in this repository.
 
 ---
 
-Check out vim plugins:  
-[**footprints**](https://github.com/axlebedev/footprints)  
-[**vim-find-my-cursor**](https://github.com/axlebedev/vim-find-my-cursor)  
 
-**<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;★</p>**
+Check out my Vim plugins:   
+https://github.com/axlebedev  
